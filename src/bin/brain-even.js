@@ -1,3 +1,11 @@
 #!/usr/bin/env node
 
-console.log('Welcome to the Brain EVEN!');
+import { getName, welcome, greeting, evenGame } from '..';
+
+welcome();
+
+console.log('Answer "yes" if number even otherwise answer "no".');
+
+// greeting(userName);
+
+evenGame();
