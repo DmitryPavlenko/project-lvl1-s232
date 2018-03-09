@@ -24,21 +24,17 @@ const getAction = () => {
   return actions[getRandom(actions.length)];
 };
 
-const calcGame = () => {
-  const rules = 'What is the result of the expression?';
+const rules = 'What is the result of the expression?';
 
-  const gameFunc = () => {
-    const maxNum = 10;
-    const num1 = getRandom(maxNum);
-    const num2 = getRandom(maxNum);
-    const action = getAction();
+const game = () => {
+  const maxNum = 10;
+  const num1 = getRandom(maxNum);
+  const num2 = getRandom(maxNum);
+  const action = getAction();
 
-    const quest = `${num1} ${action} ${num2}`;
-    const sol = String(calc(num1, num2, action));
-    return cons(quest, sol);
-  };
-
-  return makeGame(gameFunc, rules);
+  const quest = `${num1} ${action} ${num2}`;
+  const sol = String(calc(num1, num2, action));
+  return cons(quest, sol);
 };
 
-export default calcGame;
+export default () => makeGame(game, rules);
