@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 import evenGame from './games/brain-even';
 import calcGame from './games/brain-calc';
+import gcdGame from './games/brain-gcd';
 
 export const getName = () => readlineSync.question('May I have your name?: ');
 
@@ -48,4 +49,4 @@ const makeGame = (gameFunc, gameRules, maxTries = 3) => {
 
 // export default makeGame;
 
-export { evenGame, calcGame, makeGame };
+export { makeGame, evenGame, calcGame, gcdGame };
