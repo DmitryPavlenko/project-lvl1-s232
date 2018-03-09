@@ -28,7 +28,8 @@
   },
   "homepage": "https://github.com/DmitryPavlenko/project-lvl1-s232#readme",
   "dependencies": {
-    "readline-sync": "^1.4.9"
+    "readline-sync": "^1.4.9",
+    "hexlet-pairs": "*"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

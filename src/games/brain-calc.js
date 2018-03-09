@@ -1,8 +1,5 @@
-import readlineSync from 'readline-sync';
-import { welcome, greeting, getName, showGameRules, getRandom } from '..';
-
-const maxNum = 10;
-const maxTries = 3;
+import { cons } from 'hexlet-pairs';
+import { getRandom, makeGame } from '..';
 
 const calc = (a, b, action) => {
   let res = 0;
@@ -28,30 +25,20 @@ const getAction = () => {
 };
 
 const calcGame = () => {
-  welcome();
-  showGameRules('What is the result of the expression?');
-  const userName = getName();
-  greeting(userName);
-  let count = 0;
+  const rules = 'What is the result of the expression?';
 
-  do {
+  const gameFunc = () => {
+    const maxNum = 10;
     const num1 = getRandom(maxNum);
     const num2 = getRandom(maxNum);
     const action = getAction();
-    const correctAnwer = String(calc(num1, num2, action));
 
-    console.log(`Question: ${num1} ${action} ${num2}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (answer === correctAnwer) {
-      console.log('Correct!');
-      count += 1;
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnwer}'.\nLet's try again, ${userName}!`);
-      return;
-    }
-  } while (count < maxTries);
+    const quest = `${num1} ${action} ${num2}`;
+    const sol = String(calc(num1, num2, action));
+    return cons(quest, sol);
+  };
 
-  console.log(`Congratulations, ${userName}!`);
+  return makeGame(gameFunc, rules);
 };
 
 export default calcGame;
