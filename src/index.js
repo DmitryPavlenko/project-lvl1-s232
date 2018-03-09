@@ -12,7 +12,7 @@ export const showGameRules = rules => console.log(`${rules}`);
 
 export const isEven = num => num % 2 === 0;
 
-export const getRandom = (maxNum, minNum = 0) => Math.floor(Math.random() * (maxNum - minNum)) + minNum;
+export const getRandom = (max, min = 0) => Math.floor(Math.random() * (max - min)) + min;
 
 
 export { evenGame, calcGame };
