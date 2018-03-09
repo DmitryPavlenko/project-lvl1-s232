@@ -22,7 +22,10 @@ const calc = (a, b, action) => {
   return res;
 };
 
-const actions = ['+', '-', '*'];
+const getAction = () => {
+  const actions = ['+', '-', '*'];
+  return actions[getRandom(actions.length)];
+};
 
 const calcGame = () => {
   welcome();
@@ -34,7 +37,7 @@ const calcGame = () => {
   do {
     const num1 = getRandom(maxNum);
     const num2 = getRandom(maxNum);
-    const action = actions[getRandom(actions.length)];
+    const action = getAction();
     const correctAnwer = String(calc(num1, num2, action));
 
     console.log(`Question: ${num1} ${action} ${num2}`);
