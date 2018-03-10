@@ -1,7 +1,9 @@
 import { cons } from 'hexlet-pairs';
-import { isEven, getRandom, makeGameFlow } from '..';
+import { getRandom, makeGameFlow } from '..';
 
 const rules = 'Answer "yes" if number even otherwise answer "no".';
+
+const isEven = num => num % 2 === 0;
 
 const gameLogic = () => {
   const maxNum = 100;
