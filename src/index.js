@@ -8,14 +8,15 @@ const greeting = name => console.log(`Hello, ${name}!\n`);
 const question = round => car(round);
 const solution = round => cdr(round);
 
-export const getRandom = (max, min = 0) => Math.floor(Math.random() * (max - min)) + min;v
+export const getRandom = (max, min = 0) => Math.floor(Math.random() * (max - min)) + min;
 
-export const isPrime = (number) => 
+export const isPrime = (number) => {
   let i = 2;
   while (i <= number && number % i !== 0) {
     i += 1;
   }
   return i === number;
+};
 
 export const makeGameFlow = (gameLogic, gameRules, maxTries = 3) => {
   welcome();
