@@ -1,7 +1,7 @@
 import { cons } from 'hexlet-pairs';
 import { getRandom, makeGameFlow } from '..';
 
-const rules = '';
+const rules = 'What number is missing in this progression?';
 
 const gameLogic = () => {
   const rowLength = 10;

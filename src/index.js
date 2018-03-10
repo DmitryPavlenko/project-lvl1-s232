@@ -3,7 +3,7 @@ import { car, cdr } from 'hexlet-pairs';
 
 const welcome = () => console.log('Welcome to the Brain Games!');
 
-const greeting = name => console.log(`Hello, ${name}!`);
+const greeting = name => console.log(`Hello, ${name}!\n`);
 
 const question = round => car(round);
 const solution = round => cdr(round);
@@ -12,9 +12,9 @@ export const getRandom = (max, min = 0) => Math.floor(Math.random() * (max - min
 
 export const makeGameFlow = (gameLogic, gameRules, maxTries = 3) => {
   welcome();
-  console.log(gameRules);
   const userName = readlineSync.question('May I have your name?: ');
   greeting(userName);
+  console.log(gameRules);
   if (!gameLogic && !gameRules) {
     return;
   }
