@@ -1,7 +1,12 @@
-import { makeGameFlow } from '..';
+// // Basic game template
+// import { makeGameFlow } from '..';
 
-const rules = '';
+// const rules = '';
 
-const gameLogic = () => {};
+// const gameLogic = () => {
+//   const quest = '';
+//   const sol = '';
+//   return cons(quest, sol);
+// };
 
-export default () => makeGameFlow(gameLogic, rules);
+// export default () => makeGameFlow(gameLogic, rules);
