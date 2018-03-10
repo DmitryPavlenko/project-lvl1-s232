@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import { getRandom, makeGame } from '..';
+import { getRandom, makeGameFlow } from '..';
 
 const gcd = (n1, n2) => {
   let a = n1;
@@ -16,7 +16,7 @@ const gcd = (n1, n2) => {
 
 const rules = 'Find the greatest common divisor of given numbers.';
 
-const game = () => {
+const gameLogic = () => {
   const maxNum = 100;
   const num1 = getRandom(maxNum, 1);
   const num2 = getRandom(maxNum, 1);
@@ -26,4 +26,4 @@ const game = () => {
   return cons(quest, sol);
 };
 
-export default () => makeGame(game, rules);
+export default () => makeGameFlow(gameLogic, rules);

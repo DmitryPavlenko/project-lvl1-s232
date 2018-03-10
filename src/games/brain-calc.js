@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import { getRandom, makeGame } from '..';
+import { getRandom, makeGameFlow } from '..';
 
 const calc = (a, b, action) => {
   let res = 0;
@@ -26,7 +26,7 @@ const getAction = () => {
 
 const rules = 'What is the result of the expression?';
 
-const game = () => {
+const gameLogic = () => {
   const maxNum = 10;
   const num1 = getRandom(maxNum);
   const num2 = getRandom(maxNum);
@@ -37,4 +37,4 @@ const game = () => {
   return cons(quest, sol);
 };
 
-export default () => makeGame(game, rules);
+export default () => makeGameFlow(gameLogic, rules);

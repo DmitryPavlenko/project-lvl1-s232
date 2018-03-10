@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import { getRandom, makeGame } from '..';
+import { getRandom, makeGameFlow } from '..';
 
 const balance = (num) => {
   const digits = String(num).split('').sort((a, b) => a - b);
@@ -16,7 +16,7 @@ const balance = (num) => {
 
 const rules = 'Balance the given number.';
 
-const game = () => {
+const gameLogic = () => {
   const maxNum = 10000;
   const num = getRandom(maxNum, 1);
   const quest = num;
@@ -24,4 +24,4 @@ const game = () => {
   return cons(quest, sol);
 };
 
-export default () => makeGame(game, rules);
+export default () => makeGameFlow(gameLogic, rules);

@@ -16,7 +16,7 @@ export const getRandom = (max, min = 0) => Math.floor(Math.random() * (max - min
 const question = round => car(round);
 const solution = round => cdr(round);
 
-export const makeGame = (gameFunc, gameRules, maxTries = 3) => {
+export const makeGameFlow = (gameLogic, gameRules, maxTries = 3) => {
   welcome();
   console.log(gameRules);
   const userName = getName();
@@ -24,7 +24,7 @@ export const makeGame = (gameFunc, gameRules, maxTries = 3) => {
   let count = 0;
 
   do {
-    const gameRound = gameFunc();
+    const gameRound = gameLogic();
     const sol = solution(gameRound);
     const quest = question(gameRound);
     console.log(`Question: ${quest}`);
