@@ -16,7 +16,7 @@ const balance = (num) => {
 
 const rules = 'Balance the given number.';
 
-const gameLogic = () => {
+const generateData = () => {
   const maxNum = 10000;
   const num = getRandom(maxNum, 1);
   const quest = num;
@@ -24,4 +24,4 @@ const gameLogic = () => {
   return cons(quest, sol);
 };
 
-export default () => makeGameFlow(gameLogic, rules);
+export default () => makeGameFlow(generateData, rules);

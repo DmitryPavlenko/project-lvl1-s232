@@ -26,7 +26,7 @@ const getAction = () => {
 
 const rules = 'What is the result of the expression?';
 
-const gameLogic = () => {
+const generateData = () => {
   const maxNum = 10;
   const num1 = getRandom(maxNum);
   const num2 = getRandom(maxNum);
@@ -37,4 +37,4 @@ const gameLogic = () => {
   return cons(quest, sol);
 };
 
-export default () => makeGameFlow(gameLogic, rules);
+export default () => makeGameFlow(generateData, rules);

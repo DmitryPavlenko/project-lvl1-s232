@@ -3,10 +3,10 @@
 
 // const rules = '';
 
-// const gameLogic = () => {
+// const generateData = () => {
 //   const quest = '';
 //   const sol = '';
 //   return cons(quest, sol);
 // };
 
-// export default () => makeGameFlow(gameLogic, rules);
+// export default () => makeGameFlow(generateData, rules);

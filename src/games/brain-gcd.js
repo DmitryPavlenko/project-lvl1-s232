@@ -16,7 +16,7 @@ const gcd = (n1, n2) => {
 
 const rules = 'Find the greatest common divisor of given numbers.';
 
-const gameLogic = () => {
+const generateData = () => {
   const maxNum = 100;
   const num1 = getRandom(maxNum, 1);
   const num2 = getRandom(maxNum, 1);
@@ -26,4 +26,4 @@ const gameLogic = () => {
   return cons(quest, sol);
 };
 
-export default () => makeGameFlow(gameLogic, rules);
+export default () => makeGameFlow(generateData, rules);
